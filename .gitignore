@@ -35,4 +35,5 @@ typings/
 .vscode
 
 # Typescript
-*.js*
+*.js
+*.js.map
