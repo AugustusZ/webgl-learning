@@ -1,18 +1,26 @@
 import { GeometryBase } from './base/GeometryBase';
+import { MouseData } from '../io/Mouse';
 import { DrawingPreset } from './DrawingPreset';
 
-export class Circle extends GeometryBase {
+export class Point extends GeometryBase {
   x: number;
   y: number;
   r: number;
   c: string;
 
-  constructor(x: number, y: number, r: number) {
+  static mouseClick(m: MouseData) {
+    console.log('click from point class');
+  }
+  static mouseUp(m: MouseData) {
+    /* */
+  }
+
+  constructor(x: number, y: number, r: number, c: string = '#000000') {
     super();
     this.x = x;
     this.y = y;
     this.r = r;
-    this.c = DrawingPreset.getRamdomHexColor();
+    this.c = c;
   }
 
   render(ctx: CanvasRenderingContext2D): void {

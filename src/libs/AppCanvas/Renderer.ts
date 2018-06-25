@@ -1,4 +1,4 @@
-import { AppCanvas } from '../AppCanvas';
+import { AppCanvas } from '../AppCanvas/AppCanvas';
 import { GeometryBase } from './Geometry/base/GeometryBase';
 
 export class Renderer {
@@ -19,6 +19,6 @@ export class Renderer {
   }
 
   add(g: GeometryBase) {
-    this.list.push(g);
+    this.list.unshift(g);
   }
 }

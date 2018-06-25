@@ -1,4 +1,4 @@
-import { AppCanvas } from '../..';
+import { AppCanvas } from '../../AppCanvas';
 
 export abstract class GeometryBase {
   constructor() {

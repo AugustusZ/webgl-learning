@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { AppCanvas } from './libs/AppCanvas';
+import { AppCanvas } from './libs/AppCanvas/AppCanvas';
 
 export default class App extends React.PureComponent {
   componentDidMount() {
     const app = new AppCanvas();
-    app.test();
+    app.start();
   }
 
   render() {
@@ -13,10 +13,16 @@ export default class App extends React.PureComponent {
         id="canvas-container"
         style={{
           width: '100vw',
-          height: '100vh'
+          height: '100vh',
+          backgroundColor: 'silver'
         }}
       >
-        <canvas id="canvas" />
+        <canvas
+          id="canvas"
+          style={{
+            backgroundColor: 'white'
+          }}
+        />
       </div>
     );
   }
